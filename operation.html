@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+<link type="text/css" rel="stylesheet" media="all" href="css/main.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/foundation.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+ <section id="main-image" style="background: url(http://novagold.com/_templates/2/source/img/img_main_company.jpg) no-repeat 50% 50%;
+    background-size: cover;">
+	<div class="opacity">
+		<a href="/company/about/"><div class="vert-center"><img src="http://www.arfeenkhan.com/nova/_templates/2/source/img/icon_main_company.png" class="icon"><br><h1>Operation</h1></div></a>
+							
+	</div>
+</section>
+<section id="content" style="padding: 0px;     margin: 0px">
+	<div class="column small-12 medium-3" id="content-left">
+        <div class="column small-12 subnav "  id="about"  ><a class="1" title="About Business" >Current Assets</a></div>
+        <div class="column small-12 subnav " id="vsnclick" ><a class="1" title="Board of Directors" >Revenue Comparison</a></div>
+        
+   </div>
+	<div class="column small-12 medium-9 about" id="content-right " style="display:block">
+		<h1>Current Assets</h1>
+	<div class="mobile-only">
+	    
+			</div> 
+ <h3>The fixed assets below critical to Exiteco’s day-to-day operations are fully owned by the company</h3>
+  <div class="column small-12 medium-6" id="content-left">
+    <h2>Warehouse Facility</h2>
+    <ul>
+      <li>Our processing plant is situataed in our warehousing facility which extends ~10,000m2 </li>
+<li>The warehousing facility also serves as a storage unit and logistics hub for our concentrate products once they ready for shipment to our customers worldwide</li>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5g3UK83v2Rv0qRUSxUMC0axGTJejSe965sNMjKzRP5yb1KiBV">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5g3UK83v2Rv0qRUSxUMC0axGTJejSe965sNMjKzRP5yb1KiBV">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5g3UK83v2Rv0qRUSxUMC0axGTJejSe965sNMjKzRP5yb1KiBV">
+    </ul>
+    </div>
+    <div class="column small-12 medium-6" id="content-left">
+       <h2>Processing Plant</h2>
+    <ul>
+      <li>Exiteco has developed a robust process for the recovery of copper concentrate with precious metal by-products at our processing plant through milling and gravitational separation  </li>
+<li>Due to its efficiency and relatively low cost it is the most well-proven and accepted technique of concentrating minerals</li>
+<li>Current capacity is 100tpd mill feed rate with an output of 300mt per month</li>
+<li>Exiteco is looking to expandi and modernisie the plant to increase productive capacity and improve recovery rates</li>
+    </ul>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5g3UK83v2Rv0qRUSxUMC0axGTJejSe965sNMjKzRP5yb1KiBV">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5g3UK83v2Rv0qRUSxUMC0axGTJejSe965sNMjKzRP5yb1KiBV">
+    </div>
+		
+</div>
+
+<!--vision-->
+<div class="column small-12 medium-3" id="content-left">
+    </div>
+	<div class="column small-12 medium-9 vision" id="content-right " style="display:none">
+		 <h1>Heighlights</h1>
+      <select onchange="displayImage(this);"> 
+      <option>select</option>
+      <option value="revenue.PNG">Image one</option>
+      <option value="overview.PNG">Image Two</option>
+      <option value="forecast.PNG">Image three</option>
+    </select>
+	<div class="mobile-only">
+	    
+			</div>  
+ <img id="canvas" src="revenue.PNG">
+    
+</div>
+ 
+ 
+</section>
+
+
+</body>
+<script>
+   
+  function displayImage(elem) {
+    var image = document.getElementById("canvas");
+    image.src = elem.value;        
+  }
+  
+$(".management-bio .slide-container").click(function(){
+   // alert('sdf');
+  $(this).toggleClass("active");
+  $(this).css('overflow','visible');
+   $(this).children('.slide-content').css('height','auto');
+  
+});
+ $(document).ready(function(){
+  $('#about').addClass("on");
+  $('#about').click(function(){
+    $(this).addClass("on");
+     $('#vsnclick').removeClass("on");
+     $('#mgtclick').removeClass("on");
+});
+});
+$(document).ready(function(){
+  $('#vsnclick').click(function(){
+    $(this).addClass("on");
+       $('#about').removeClass("on");
+     $('#mgtclick').removeClass("on");
+});
+});
+$(document).ready(function(){
+  $('#mgtclick').click(function(){
+    $(this).addClass("on");
+       $('#about').removeClass("on");
+     $('#vsnclick').removeClass("on");
+});
+});
+    $('#about').click(function(id){
+  $(".about").css('display','block');
+  $(".mgt").css('display','none');
+  $(".vision").css('display','none');
+});
+$('#vsnclick').click(function(){
+  //  alert('dasf');
+ $(".about").css('display','none');
+  $(".mgt").css('display','none');
+     $(".vision").css('display','block');
+});
+ 
+ $('#mgtclick').click(function(){
+  //   alert('erwr');
+  $(".about").css('display','none');
+  $(".mgt").css('display','block');
+     $(".vision").css('display','none');
+});
+ 
+</script>
+</html>
